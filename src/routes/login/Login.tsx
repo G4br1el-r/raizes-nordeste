@@ -36,6 +36,13 @@ export function Login() {
         </p>
       </div>
 
+      <div className="bg-milho/20 border border-milho rounded-lg px-3 py-2 mb-6 text-center">
+        <p className="text-xs text-cafe/80">
+          💡 Modo demonstração: use qualquer e-mail válido e uma senha
+          com no mínimo 4 caracteres para testar.
+        </p>
+      </div>
+
       <div className="space-y-4">
         <div>
           <label className="block text-sm font-medium mb-1" htmlFor="email">
@@ -70,13 +77,6 @@ export function Login() {
         <Button onClick={entrar} className="w-full">
           Entrar
         </Button>
-
-        <p className="text-center text-sm text-cafe/60">
-          Não tem conta?{' '}
-          <button className="text-folha font-medium hover:underline">
-            Cadastre-se
-          </button>
-        </p>
       </div>
     </div>
   );

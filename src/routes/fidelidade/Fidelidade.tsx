@@ -7,6 +7,7 @@ import { Badge } from '../../components/Badge';
 // Sem consentimento, nao mostramos dados de perfil.
 export function Fidelidade() {
   const [consentiu, setConsentiu] = useState(false);
+  const [marcado, setMarcado] = useState(false);
 
   // Antes do consentimento: explica o uso dos dados e pede opt-in
   if (!consentiu) {
@@ -38,14 +39,8 @@ export function Fidelidade() {
             type="checkbox"
             id="consentimento"
             className="mt-1"
-            onChange={(e) => {
-              // Só habilitamos o botao quando marcado; aqui apenas
-              // guardamos a intencao para o clique seguinte.
-              const botao = document.getElementById(
-                'btn-participar'
-              ) as HTMLButtonElement | null;
-              if (botao) botao.disabled = !e.target.checked;
-            }}
+            checked={marcado}
+            onChange={(e) => setMarcado(e.target.checked)}
           />
           <span className="text-sm text-cafe/80">
             Li e concordo com o uso dos meus dados para o programa de
@@ -55,7 +50,7 @@ export function Fidelidade() {
 
         <Button
           id="btn-participar"
-          disabled
+          disabled={!marcado}
           onClick={() => setConsentiu(true)}
           className="w-full"
         >
