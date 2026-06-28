@@ -54,6 +54,15 @@ export function SelecaoCanal() {
         Independente do canal, a jornada é a mesma: ver cardápio, pedir,
         pagar e acompanhar.
       </p>
+
+      <div className="text-center mt-10 pt-6 border-t border-areia">
+        <Link
+          to="/admin"
+          className="inline-block text-sm text-cafe/60 hover:text-barro transition-colors"
+        >
+          🛠️ Painel da Matriz
+        </Link>
+      </div>
     </div>
   );
 }

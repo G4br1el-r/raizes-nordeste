@@ -38,6 +38,12 @@ export function Header() {
             Promoções
           </Link>
           <Link
+            to="/fidelidade"
+            className="text-sm text-areia hover:text-renda hidden sm:block"
+          >
+            Fidelidade
+          </Link>
+          <Link
             to="/carrinho"
             className="relative bg-barro px-3 py-2 rounded-lg text-sm font-semibold"
           >

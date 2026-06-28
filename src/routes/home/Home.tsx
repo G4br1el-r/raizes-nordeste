@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { unidades } from '../../data/unidades';
 import { useUnidade } from '../../features/unidade/UnidadeContext';
 import { Badge } from '../../components/Badge';
@@ -46,6 +46,15 @@ export function Home() {
             </div>
           </button>
         ))}
+      </div>
+
+      <div className="mt-6 text-center">
+        <Link
+          to="/fidelidade"
+          className="inline-block text-sm font-semibold text-barro hover:text-cafe transition-colors"
+        >
+          ⭐ Ver meu programa de fidelidade
+        </Link>
       </div>
     </div>
   );
